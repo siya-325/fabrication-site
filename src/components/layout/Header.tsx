@@ -18,9 +18,9 @@ export function Header() {
     <header className="fixed top-[10px] left-0 right-0 mx-auto w-[calc(100%-24px)] max-w-[1300px] bg-white rounded-t-none rounded-b-[10px] py-[22px] px-[36px] z-50 shadow-[0_4px_24px_rgba(0,0,0,0.06)] transition-all duration-300">
       <div className="flex items-center justify-between w-full">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center no-underline" aria-label="RF Home">
+        <Link href="/" className="flex items-center no-underline" aria-label="FB Home">
           <span className="font-urbanist font-extrabold text-[30px] tracking-[-0.04em] text-brand-black leading-none hover:opacity-80 transition-opacity">
-            RF
+            FB
           </span>
         </Link>
 

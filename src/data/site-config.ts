@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: 'RF',
-  legalName: 'RF Fabrication',
+  name: 'FB',
+  legalName: 'FB Fabrication',
   tagline: 'Material intelligence. Built to last.',
   description: 'A fabrication studio making architectural metalwork, bespoke interiors, and things built for a lifetime.',
   email: 'hello@forge17.co',

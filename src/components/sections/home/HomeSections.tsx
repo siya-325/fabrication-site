@@ -48,7 +48,7 @@ export function ServicesPreview() {
   return (
     <section className="py-0 relative z-10">
       <div className="w-full max-w-[1330px] mx-auto px-5">
-        <div className="bg-white rounded-[10px] p-12 -mt-[30px] shadow-[0_10px_40px_rgba(0,0,0,0.05)]">
+        <div className="bg-white rounded-[10px] p-[1rem] sm:p-[1.5rem] md:p-[3rem] -mt-[12rem] shadow-[0_10px_40px_rgba(0,0,0,0.05)]">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[15px]">
             {ironisServices.map((service, index) => (
               <div
@@ -92,9 +92,5 @@ export function ServicesPreview() {
     </section>
   )
 }
-
-export function ProjectsPreview() {
-  return <section className="projects-section page-section reveal-section"><div className="projects-header"><SectionHeading eyebrow="03 — Selected work" title="Proof in the details." /><Link href="/projects" className="text-link">See all projects <ArrowUpRight aria-hidden="true" /></Link></div><div className="project-grid">{projects.map((project, index) => <Link href="/projects" className={`project-card project-card-${index + 1}`} key={project.number}><div className="project-image"><Image src={project.image} alt={`${project.title} project detail`} fill sizes="(max-width: 768px) 100vw, 50vw" /></div><div className="project-caption"><span>{project.number}</span><div><h3>{project.title}</h3><p>{project.category}</p></div><ArrowUpRight aria-hidden="true" /></div></Link>)}</div></section>
-}
-
-export function HomeCta() { return <section className="home-cta"><p className="eyebrow">04 — Next move</p><div className="cta-line"><h2>Bring us<br /><em>the hard part.</em></h2><p>Tell us what you&apos;re building.<br />We&apos;ll help you make it real.</p></div><Link href="/contact" className="circle-link" aria-label="Start a project"><ArrowUpRight aria-hidden="true" /></Link></section> }
+export { ProjectsSection as ProjectsPreview } from './ProjectsSection'
+export { CtaSection as HomeCta, CtaSection } from './CtaSection'

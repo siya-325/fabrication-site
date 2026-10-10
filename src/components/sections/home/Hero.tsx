@@ -7,9 +7,9 @@ import { HexagonIcon, ArrowIcon } from '@/components/shared/IronisUI'
 
 export function Hero() {
   return (
-    <section className="relative pt-60 pb-30 overflow-hidden">
+    <section className="relative w-full min-h-screen min-h-[100dvh] md:h-screen md:min-h-[100vh] flex flex-col justify-end overflow-hidden pt-28 sm:pt-36 md:pt-40 pb-20 sm:pb-24 md:pb-28 lg:pb-32">
       {/* Background Video with Poster Fallback */}
-      <div className="absolute inset-0 w-full h-[135%] z-0 overflow-hidden">
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <video
           autoPlay
           loop
@@ -40,7 +40,7 @@ export function Hero() {
       </div>
 
       {/* Hero Content Container */}
-      <div className="relative z-10 w-full max-w-[1330px] mx-auto px-5">
+      <div className="relative z-10 w-full max-w-[1330px] mx-auto px-5 mb-40">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end w-full gap-[30px]">
           {/* Left Column */}
           <div className="w-full max-w-[480px] flex flex-col items-start">

@@ -6,14 +6,22 @@
      COLOR TOKENS - SINGLE SOURCE OF TRUTH
      Change any color here to update the entire website (Tailwind classes + CSS)!
      ========================================================================== */
-  --primary: #fdf36d;              /* Primary signature yellow */
-  --primary-light: #f9f9f9;        /* Off-white canvas / page background */
-  --brand-black: #1e1e1e;          /* Signature deep matte black */
-  --brand-gray: #6f6f6f;           /* Muted text & paragraph gray */
-  --brand-border: #e5e5e5;         /* Thin borders & dividers */
-  --brand-light-gray: #ececec;     /* Card borders & surface lines */
-  --brand-dark: #3d3d3d;           /* Dark borders & card accents */
-  --brand-white: #ffffff;          /* Pure white */
+  --primary: #4daccf;
+  /* Primary signature yellow */
+  --primary-light: #f9f9f9;
+  /* Off-white canvas / page background */
+  --brand-black: #1e1e1e;
+  /* Signature deep matte black */
+  --brand-gray: #6f6f6f;
+  /* Muted text & paragraph gray */
+  --brand-border: #e5e5e5;
+  /* Thin borders & dividers */
+  --brand-light-gray: #ececec;
+  /* Card borders & surface lines */
+  --brand-dark: #3d3d3d;
+  /* Dark borders & card accents */
+  --brand-white: #ffffff;
+  /* Pure white */
 
   /* Legacy aliases */
   --black: var(--brand-black);
@@ -98,7 +106,13 @@
    ========================================================================== */
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-urbanist);
     margin-top: 10px;
     margin-bottom: 10px;
@@ -585,12 +599,10 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(14, 14, 14, 0.42) 0%,
-    rgba(14, 14, 14, 0.35) 40%,
-    rgba(14, 14, 14, 0.65) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(14, 14, 14, 0.42) 0%,
+      rgba(14, 14, 14, 0.35) 40%,
+      rgba(14, 14, 14, 0.65) 100%);
   z-index: 1;
 }
 
@@ -745,37 +757,46 @@
     border-bottom-right-radius: 10px;
     padding: 16px 20px;
   }
+
   .nav-menu {
     display: none;
   }
+
   .mobile-menu-btn {
     display: block;
   }
+
   .banner-home-1 {
     padding-top: 150px;
     padding-bottom: 60px;
     min-height: auto;
   }
+
   .content-banner-home-1 {
     flex-direction: column-reverse;
     align-items: flex-start;
     gap: 36px;
   }
+
   .left-content-banner-home-1 {
     width: 100%;
     max-width: 100%;
   }
+
   .right-content-banner-home-1 {
     width: 100%;
     justify-content: flex-start;
   }
+
   .home-1-heading {
     text-align: left;
     font-size: 54px;
   }
+
   .paragraph-banner-home-1 {
     font-size: 24px;
   }
+
   .collection-list-services {
     grid-template-columns: 1fr;
   }
@@ -785,14 +806,37 @@
   .nav-cta-prompt {
     display: none;
   }
+
   .home-1-heading {
     font-size: 42px;
   }
+
   .values-banner-home-1 {
     flex-wrap: wrap;
     gap: 18px;
   }
+
   .paragraph-banner-home-1 {
     font-size: 20px;
   }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }

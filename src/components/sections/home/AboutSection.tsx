@@ -13,7 +13,7 @@ export function AboutSection() {
   ]
 
   return (
-    <section className="py-20 lg:py-24 relative">
+    <section className="pt-20 lg:pt-24 pb-12 lg:pb-14 relative">
       <div className="w-full max-w-[1330px] mx-auto px-5">
         {/* Top Header Row */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-10 mb-10 lg:mb-12">
