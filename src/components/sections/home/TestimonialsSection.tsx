@@ -11,19 +11,19 @@ const testimonials: TestimonialItem[] = [
   {
     id: '1',
     quote:
-      '“Ironis provided exceptional metal fabrication services that perfectly met our project requirements. Their team demonstrated great professionalism and technical expertise from start to finish.”',
+      '“FB provided exceptional metal fabrication services that perfectly met our project requirements. Their team demonstrated great professionalism and technical expertise from start to finish.”',
     author: 'David B., TechForm Engineering',
   },
   {
     id: '2',
     quote:
-      '“Ironis provided exceptional metal fabrication services that perfectly met our project requirements. Their team demonstrated great professionalism and technical expertise from start to finish.”',
+      '“FB provided exceptional metal fabrication services that perfectly met our project requirements. Their team demonstrated great professionalism and technical expertise from start to finish.”',
     author: 'John S., NovaBuild Systems',
   },
   {
     id: '3',
     quote:
-      '“Ironis provided exceptional metal fabrication services that perfectly met our project requirements. Their team demonstrated great professionalism and technical expertise from start to finish.”',
+      '“FB provided exceptional metal fabrication services that perfectly met our project requirements. Their team demonstrated great professionalism and technical expertise from start to finish.”',
     author: 'Sarah J., ForgeTech Systems',
   },
 ]
@@ -31,7 +31,7 @@ const testimonials: TestimonialItem[] = [
 function StarIcon() {
   return (
     <Image
-      src="/images/ironis/star-primary.svg"
+      src="/images/fb/star-primary.svg"
       alt="Star"
       width={18}
       height={18}

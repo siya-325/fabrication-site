@@ -74,7 +74,7 @@ export function ArrowIcon({ color = 'var(--brand-black)', className = '', size =
   )
 }
 
-interface IronisButtonProps {
+interface FBButtonProps {
   href?: string
   onClick?: () => void
   children: React.ReactNode
@@ -84,7 +84,7 @@ interface IronisButtonProps {
   showArrow?: boolean
 }
 
-export function IronisButton({
+export function FBButton({
   href,
   onClick,
   children,
@@ -92,7 +92,7 @@ export function IronisButton({
   className = '',
   fullWidth = false,
   showArrow = true,
-}: IronisButtonProps) {
+}: FBButtonProps) {
   const isPrimary = variant === 'primary'
 
   const baseClasses = isPrimary

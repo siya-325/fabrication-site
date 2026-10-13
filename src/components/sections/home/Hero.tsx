@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { HexagonIcon, ArrowIcon } from '@/components/shared/IronisUI'
+import { HexagonIcon, ArrowIcon } from '@/components/shared/FbUI'
 
 export function Hero() {
   return (
@@ -15,7 +15,7 @@ export function Hero() {
           loop
           muted
           playsInline
-          poster="/images/ironis/hero-poster.jpg"
+          poster="/images/fb/hero-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
           <source
@@ -25,7 +25,7 @@ export function Hero() {
         </video>
         {/* Fallback Image */}
         <Image
-          src="/images/ironis/hero-poster.jpg"
+          src="/images/fb/hero-poster.jpg"
           alt="Metal fabrication craftsmanship"
           fill
           priority

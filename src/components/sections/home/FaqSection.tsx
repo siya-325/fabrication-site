@@ -13,7 +13,7 @@ interface FaqItem {
 const faqs: FaqItem[] = [
   {
     id: 'services',
-    question: 'What services does Ironis offer?',
+    question: 'What services does FB offer?',
     answer:
       'We specialize in metal fabrication, welding, sheet metal work, CNC machining, custom parts production, structural frames, and industrial prototyping.',
   },
@@ -59,7 +59,7 @@ export function FaqSection() {
 
             <div className="w-full h-[220px] sm:h-[260px] lg:h-[200px] relative rounded-[10px] overflow-hidden mt-8 sm:mt-10 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
               <Image
-                src="/images/ironis/faq-image.webp"
+                src="/images/fb/faq-image.webp"
                 alt="Craftsman cutting metal pipe with an angle grinder producing bright sparks"
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"

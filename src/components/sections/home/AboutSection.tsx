@@ -3,93 +3,64 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { HexagonIcon, ArrowIcon } from '@/components/shared/IronisUI'
+import { ArrowUpRight } from 'lucide-react'
+import { HexagonIcon } from '@/components/shared/FbUI'
 
 export function AboutSection() {
-  const values = [
-    { number: '1', title: 'Steel Frames' },
-    { number: '2', title: 'Architectural Metalwork' },
-    { number: '3', title: 'Precision Prototypes' },
-  ]
-
   return (
-    <section className="pt-20 lg:pt-24 pb-12 lg:pb-14 relative">
+    <section className="pt-20 sm:pt-24 lg:pt-28 pb-8 sm:pb-10 lg:pb-12 relative" aria-label="About Us">
       <div className="w-full max-w-[1330px] mx-auto px-5">
-        {/* Top Header Row */}
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-10 mb-10 lg:mb-12">
-          {/* Left Column: Subtitle & CTA Button */}
-          <div className="w-full lg:w-[265px] shrink-0 flex flex-col justify-between items-start gap-6 lg:min-h-[160px]">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10 lg:gap-14">
+          {/* Left Column: Badge, Heading, and Paragraph */}
+          <div className="w-full lg:max-w-[680px] xl:max-w-[720px] flex flex-col items-start">
             {/* Subtitle Badge */}
-            <div className="inline-flex items-center gap-2">
+            <div className="inline-flex items-center gap-2.5 mb-6 sm:mb-8">
               <HexagonIcon color="var(--brand-black)" size={15} />
-              <span className="font-urbanist text-[16px] font-semibold text-brand-black leading-[1.3]">
+              <span className="font-urbanist text-[15px] sm:text-[16px] font-semibold text-brand-black leading-none">
                 About us
               </span>
             </div>
 
-            {/* About Company Button */}
-            <Link
-              href="/about"
-              className="group inline-flex items-center justify-between gap-4 bg-primary text-brand-black font-semibold text-[16px] px-[28px] py-[15px] rounded-[55px] border border-primary hover:bg-brand-black hover:border-brand-black hover:text-primary transition-all duration-300 shadow-sm w-full sm:w-auto lg:w-full max-w-[220px]"
-            >
-              <span>About Company</span>
-              <div className="w-6 h-6 relative shrink-0">
-                <ArrowIcon
-                  color="var(--brand-black)"
-                  className="absolute inset-0 transition-all duration-300 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:opacity-0"
-                />
-                <ArrowIcon
-                  color="var(--primary)"
-                  className="absolute inset-0 -translate-x-2 translate-y-2 -rotate-45 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:rotate-0 group-hover:opacity-100"
-                />
-              </div>
-            </Link>
-          </div>
-
-          {/* Right Column: Large Heading & Paragraph */}
-          <div className="w-full lg:w-[72%] xl:w-[74%] flex flex-col items-start">
-            <h2 className="font-urbanist text-[32px] sm:text-[42px] lg:text-[48px] font-medium leading-[1.2] tracking-[-0.96px] text-brand-gray m-0 mb-4">
-              We specialize in high-quality{' '}
-              <span className="text-brand-black font-semibold">
-                metal fabrication, strength and efficiency.
-              </span>{' '}
-              From individual parts to complex structures.
+            {/* Main Two-Tone Heading */}
+            <h2 className="font-urbanist text-[36px] sm:text-[46px] lg:text-[52px] xl:text-[58px] font-normal leading-[1.12] tracking-[-0.03em] text-brand-gray m-0">
+              Creating{' '}
+              <span className="text-brand-black font-semibold">Stronger Structures</span>
+              <br />
+              Through Smarter Fabrication.
             </h2>
-            <p className="font-urbanist text-[16px] sm:text-[17px] font-light leading-[1.6] text-brand-gray max-w-[720px] m-0">
-              Specializing in metal fabrication, custom components, and industrial builds, we bring
-              together experience, precision, and hands-on craftsmanship.
+
+            {/* Description Copy */}
+            <p className="font-urbanist text-[15px] sm:text-[16.5px] font-light leading-[1.65] text-brand-gray mt-6 sm:mt-7 mb-0 max-w-[560px]">
+              With years of hands-on experience and a commitment to quality
+              craftsmanship, we turn raw materials into real-world solutions —
+              from custom industrial parts to full-scale fabrication projects.
             </p>
           </div>
-        </div>
 
-        {/* Bottom Content Row: Numbered Values & Metal Photo */}
-        <div className="flex flex-col-reverse lg:flex-row justify-between items-start lg:items-end gap-8 lg:gap-10">
-          {/* Left Column: 3 Values Chips Stacked */}
-          <div className="flex flex-col gap-3 w-full lg:w-[265px] shrink-0">
-            {values.map((item) => (
-              <div
-                key={item.number}
-                className="flex items-center gap-[15px] bg-white rounded-[55px] pr-[25px] w-full max-w-[270px] shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-brand-light-gray/60 hover:shadow-md transition-shadow"
+          {/* Right Column: Welder Image Card & "More about us" Link */}
+          <div className="w-full lg:w-auto flex flex-col items-start self-start lg:pt-6">
+            {/* Welder Photo */}
+            <div className="w-full sm:w-[420px] lg:w-[400px] xl:w-[440px] h-[200px] sm:h-[215px] lg:h-[210px] xl:h-[220px] relative rounded-[16px] overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.05)]">
+              <Image
+                src="/images/fb/metal-photo.webp"
+                alt="Welder working on metal beam with glowing sparks"
+                fill
+                priority
+                sizes="(max-width: 640px) 100vw, 440px"
+                className="object-cover object-center hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+
+            {/* "More about us" Link with Bottom Border */}
+            <div className="mt-5 sm:mt-6">
+              <Link
+                href="/about"
+                className="group inline-flex items-center gap-2 text-brand-black font-semibold text-[15px] sm:text-[16px] border-b border-brand-black pb-1 hover:text-brand-gray hover:border-brand-gray transition-colors"
               >
-                <div className="w-[53px] h-[53px] rounded-full bg-primary flex items-center justify-center font-semibold text-[16px] text-brand-black shrink-0">
-                  {item.number}
-                </div>
-                <span className="font-urbanist font-medium text-[16px] text-brand-black leading-tight">
-                  {item.title}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Right Column: Metal Fabrication Image */}
-          <div className="w-full lg:w-[72%] xl:w-[74%] h-[320px] sm:h-[400px] lg:h-[440px] xl:h-[470px] relative rounded-[10px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
-            <Image
-              src="/images/ironis/metal-photo.webp"
-              alt="Metal fabrication craftsman welding with sparks"
-              fill
-              sizes="(max-width: 991px) 100vw, 74vw"
-              className="object-cover w-full h-full hover:scale-[1.02] transition-transform duration-700"
-            />
+                <span>More about us</span>
+                <ArrowUpRight className="w-4 h-4 stroke-[2.5] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

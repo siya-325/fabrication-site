@@ -18,7 +18,7 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: 'Ironis — Metal Fabrication & Engineering',
+  title: 'FB — Metal Fabrication & Engineering',
   description: 'High-quality metalwork, built for efficiency, accuracy, and long-term performance. Specialist in custom metal fabrication and architectural elements.',
 }
 

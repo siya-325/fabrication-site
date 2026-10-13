@@ -1,3 +1,25 @@
+import type { Metadata } from 'next'
 import { SiteShell } from '@/components/layout/SiteShell'
+import { AboutHero } from '@/components/sections/about/AboutHero'
+import { AboutUsSection } from '@/components/sections/about/AboutUsSection'
+import { ShapingFutureSection } from '@/components/sections/about/ShapingFutureSection'
+import { HowWeWorkSection } from '@/components/sections/about/HowWeWorkSection'
+import { CtaSection } from '@/components/sections/home/CtaSection'
 
-export default function AboutPage() { return <SiteShell><section className="inner-page"><p className="eyebrow">About the studio</p><h1>Good work is a<br /><em>conversation.</em></h1><p className="inner-lede">Forge / 17 is an independent fabrication studio in Chicago. We bring patience, precision, and a little stubbornness to every material we touch.</p></section></SiteShell> }
+export const metadata: Metadata = {
+  title: 'About Us — FB Metal Fabrication & Engineering',
+  description:
+    'Discover the legacy and craftsmanship of FB Fabrication: 15+ years of heavy structural steel, architectural metalwork, expert fabrication, and precision engineering.',
+}
+
+export default function AboutPage() {
+  return (
+    <SiteShell showHeader={true}>
+      <AboutHero />
+      <AboutUsSection />
+      <ShapingFutureSection />
+      <HowWeWorkSection />
+      <CtaSection />
+    </SiteShell>
+  )
+}

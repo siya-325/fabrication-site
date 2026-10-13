@@ -13,19 +13,19 @@ const projects: ProjectItem[] = [
   {
     id: 'machine-parts',
     title: 'Custom Machine Parts',
-    image: '/images/ironis/project-3.webp',
+    image: '/images/fb/project-3.webp',
     href: '/projects',
   },
   {
     id: 'architectural',
     title: 'Architectural Metalwork',
-    image: '/images/ironis/project-1.webp',
+    image: '/images/fb/project-1.webp',
     href: '/projects',
   },
   {
     id: 'sheet-metal',
     title: 'Sheet Metal Creations',
-    image: '/images/ironis/project-2.webp',
+    image: '/images/fb/project-2.webp',
     href: '/projects',
   },
 ]

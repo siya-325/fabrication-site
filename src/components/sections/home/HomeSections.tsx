@@ -24,23 +24,23 @@ export function IntroSection() {
 }
 
 export function ServicesPreview() {
-  const ironisServices = [
+  const fbServices = [
     {
       title: 'Sheet Metal Work',
       description: 'Custom-engineered frames for industrial facilities, built to handle heavy loads and tight tolerances.',
-      image: '/images/ironis/service-1.png',
+      image: '/images/fb/service-1.png',
       href: '/services',
     },
     {
       title: 'Architectural Elements',
       description: 'Precision-crafted staircases, railings, and facades for commercial and residential spaces.',
-      image: '/images/ironis/service-2.webp',
+      image: '/images/fb/service-2.webp',
       href: '/services',
     },
     {
       title: 'Machinery Components',
       description: 'High-accuracy parts for manufacturing and production lines, produced to exact specifications.',
-      image: '/images/ironis/service-3.png',
+      image: '/images/fb/service-3.png',
       href: '/services',
     },
   ]
@@ -50,7 +50,7 @@ export function ServicesPreview() {
       <div className="w-full max-w-[1330px] mx-auto px-5">
         <div className="bg-white rounded-[10px] p-[1rem] sm:p-[1.5rem] md:p-[3rem] -mt-[12rem] shadow-[0_10px_40px_rgba(0,0,0,0.05)]">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[15px]">
-            {ironisServices.map((service, index) => (
+            {fbServices.map((service, index) => (
               <div
                 key={index}
                 className="group bg-primary-light border border-brand-light-gray rounded-[10px] flex flex-col justify-between overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] transition-all duration-300"
