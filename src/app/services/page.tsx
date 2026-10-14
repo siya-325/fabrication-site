@@ -1,4 +1,21 @@
+import type { Metadata } from 'next'
 import { SiteShell } from '@/components/layout/SiteShell'
-import { services } from '@/data/site-config'
+import { ServicesHero } from '@/components/sections/services/ServicesHero'
+import { ServicesGrid } from '@/components/sections/services/ServicesGrid'
+import { CtaSection } from '@/components/sections/home/CtaSection'
 
-export default function ServicesPage() { return <SiteShell><section className="inner-page"><p className="eyebrow">Capabilities</p><h1>What we<br /><em>make possible.</em></h1><div className="inner-list">{services.map((service) => <article key={service.number}><span>{service.number}</span><h2>{service.title}</h2><p>{service.description}</p></article>)}</div></section></SiteShell> }
+export const metadata: Metadata = {
+  title: 'Services — Expert Metalwork Solutions for Every Need | FB Fabrication',
+  description:
+    "From initial concept through final production, we're committed to excellence, reliability, and results that help your business thrive. Custom sheet metal, CNC machining, structural steel, and precision architectural fabrication.",
+}
+
+export default function ServicesPage() {
+  return (
+    <SiteShell showHeader={true}>
+      <ServicesHero />
+      <ServicesGrid />
+      <CtaSection />
+    </SiteShell>
+  )
+}
